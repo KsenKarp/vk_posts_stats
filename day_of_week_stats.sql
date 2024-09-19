@@ -1,3 +1,8 @@
+/*
+Запрос для построения графика зависимости среднего количетсва лайков
+от дня недели. Для красоты графика вмсето цифр, которые возвращает 
+EXTRACT(ISODOW FROM publish_datetime::date) прописывала названия дней недели.
+*/
 CREATE OR REPLACE VIEW day_of_week AS (
 	SELECT AVG(likes) as avg_likes_count, 
 	CASE 
